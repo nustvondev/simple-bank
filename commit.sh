@@ -24,6 +24,4 @@ commit_message="$current_date: $1"
 git add .
 echo "commit message: $commit_message"
 git commit -m "$commit_message"
-echo "pushing to origin..."
-git push
-echo "Done! Happy"
+echo "starting push: enter command ```bash push.sh```"
