@@ -7,13 +7,6 @@ then
   exit 1
 fi
 
-# # Kiểm tra xem người dùng có truyền vào tên nhánh hay không
-# if [ -z "$2" ]
-# then
-#   echo "please enter the name of the branch."
-#   exit 1
-# fi
-
 # Lấy ngày giờ hiện tại
 current_date=$(date +"%Y-%m-%d %H:%M:%S")
 
@@ -24,4 +17,5 @@ commit_message="$current_date: $1"
 git add .
 echo "commit message: $commit_message"
 git commit -m "$commit_message"
-echo "starting push: enter command ```bash push.sh```"
+echo "starting push"
+git push origin $(git branch --show-current)
