@@ -22,5 +22,7 @@ commit_message="$current_date: $1"
 
 # Thực hiện các lệnh git
 git add .
+echo "commit message: $commit_message"
 git commit -m "$commit_message"
+echo "pushing to origin..."
 git push
